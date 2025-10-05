@@ -38,11 +38,11 @@ body {
 /* ===== CARTÃO ===== */
 .cadastro-card {
   background: #fff;
-  padding: 40px 50px;
+  padding: 50px 60px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: center;
-  max-width: 420px;
+  max-width: 760px; /* espaço extra para 2 colunas */
   width: 100%;
   margin-bottom: 40px;
 }
@@ -103,15 +103,46 @@ h1 span {
   font-weight: 600;
 }
 
+/* ===== FORMULÁRIO EM GRID ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 30px; /* mais espaço entre as colunas */
+  margin-top: 20px;
+}
+
+.form-grid .col,
+.form-grid .col-full {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-grid label {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.form-grid .col-full {
+  grid-column: span 2;
+}
+
+.col {
+  min-width: 0;
+}
+
 /* ===== INPUTS ===== */
 input {
   width: 100%;
-  padding: 11px 13px;
-  margin-top: 10px;
+  padding: 12px 14px;
   border: 1.5px solid #ddd;
   border-radius: 8px;
   font-size: 0.9rem;
   transition: all 0.2s ease;
+  background: #fff;
 }
 
 input:focus {
@@ -130,7 +161,7 @@ input:focus {
   border: none;
   padding: 12px;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 25px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -141,23 +172,56 @@ input:focus {
 
 /* ===== TERMOS ===== */
 .termos {
-  text-align: left;
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.9rem;
   margin-top: 15px;
+  gap: 8px; /* espaço entre checkbox e texto */
   line-height: 1.4;
+}
+
+.termos input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.termos label {
+  color: #333;
+  cursor: pointer;
 }
 
 .termos a {
   color: #1c5c4e;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .termos a:hover {
   text-decoration: underline;
 }
 
+
 /* ===== MENSAGEM ===== */
 .msg {
   margin-top: 15px;
   font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .cadastro-card {
+    padding: 35px 25px;
+    max-width: 95%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .form-grid .col-full {
+    grid-column: span 1;
+  }
 }
