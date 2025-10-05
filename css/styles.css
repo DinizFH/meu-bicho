@@ -1,0 +1,163 @@
+/* ===== BASE ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f6f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== LOGO NO TOPO ===== */
+.topo-logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.logo-topo {
+  width: 210px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.logo-topo:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CONTAINER DO CARTÃO ===== */
+.cadastro-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ===== CARTÃO ===== */
+.cadastro-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #213547;
+  margin-bottom: 25px;
+}
+
+h1 span {
+  color: #1c5c4e;
+}
+
+/* ===== TIPO DE CONTA ===== */
+.tipo-conta {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.label-tipo {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.tipo-opcoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.btn-tipo {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  background: #f8f8f8;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-tipo:hover {
+  background: #f1f1f1;
+}
+
+.btn-tipo.ativo[data-tipo="adotante"] {
+  border-color: #e77e38;
+  color: #e77e38;
+  font-weight: 600;
+}
+
+.btn-tipo.ativo[data-tipo="ong"] {
+  border-color: #3b6f4d;
+  color: #3b6f4d;
+  font-weight: 600;
+}
+
+/* ===== INPUTS ===== */
+input {
+  width: 100%;
+  padding: 11px 13px;
+  margin-top: 10px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: #1c5c4e;
+  outline: none;
+  box-shadow: 0 0 4px rgba(28, 92, 78, 0.25);
+}
+
+/* ===== BOTÃO CADASTRAR ===== */
+.btn-cadastrar {
+  width: 100%;
+  background: #4d7345;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background: #3b6f4d;
+}
+
+/* ===== TERMOS ===== */
+.termos {
+  text-align: left;
+  font-size: 0.85rem;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.termos a {
+  color: #1c5c4e;
+  text-decoration: none;
+}
+
+.termos a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MENSAGEM ===== */
+.msg {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}

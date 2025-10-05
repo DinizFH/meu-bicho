@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Meu Bicho</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- LOGO NO TOPO -->
+  <header class="topo-logo">
+    <img src="assets/logo.png" alt="Logo Meu Bicho" class="logo-topo">
+  </header>
+
+  <main class="cadastro-page">
+    <div class="cadastro-card">
+      <h1>Junte-se ao <span>MEU BICHO!</span></h1>
+
+      <form id="formCadastro">
+        <!-- Tipo de Conta -->
+        <div class="tipo-conta">
+          <label class="label-tipo">Tipo de Conta</label>
+          <div class="tipo-opcoes">
+            <button type="button" class="btn-tipo ativo" data-tipo="adotante">Pessoa Física (Adotante)</button>
+            <button type="button" class="btn-tipo" data-tipo="ong">ONG (Parceiro)</button>
+          </div>
+        </div>
+
+        <!-- Campos PF -->
+        <div id="camposPF">
+          <input type="text" id="nome" placeholder="Nome completo" required>
+          <input type="date" id="data_nasc" required>
+          <input type="text" id="cpf" placeholder="CPF (somente números)" required>
+          <input type="text" id="telefone" placeholder="Telefone - Somente números (+55 88 123456789)" required>
+          <input type="email" id="email" placeholder="E-mail" required>
+          <input type="password" id="senha" placeholder="Senha" required>
+        </div>
+
+        <!-- Campos ONG -->
+        <div id="camposONG" style="display: none;">
+          <input type="text" id="nome_ong" placeholder="Nome da ONG" required>
+          <input type="text" id="cnpj" placeholder="CNPJ (somente números)" required>
+          <input type="text" id="telefone_ong" placeholder="Telefone - Somente números (+55 88 123456789)" required>
+          <input type="email" id="email_ong" placeholder="E-mail" required>
+          <input type="password" id="senha_ong" placeholder="Senha" required>
+        </div>
+
+        <button type="submit" class="btn-cadastrar">Cadastrar</button>
+
+        <div class="termos">
+          <input type="checkbox" id="termos" required>
+          <label for="termos">
+            Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.
+          </label>
+        </div>
+
+        <p id="msgRetorno" class="msg"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
