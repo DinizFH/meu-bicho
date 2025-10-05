@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Meu Bicho</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Logo no topo -->
+  <div class="topo-logo">
+    <img src="assets/logo.png" alt="Meu Bicho" class="logo-topo" />
+  </div>
+
+  <!-- Página de Login -->
+  <main class="cadastro-page">
+    <div class="cadastro-card">
+      <h1>Bem-vindo(a) de Volta!</h1>
+
+      <form id="formLogin">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="senha" placeholder="Senha" required />
+
+        <button type="submit" class="btn-cadastrar">Entrar</button>
+      </form>
+
+      <div class="termos">
+        <span>Esqueceu a senha? <a href="esqueceu-senha.html">Recuperar Senha.<br></a></span>
+        <span>Não tem conta? <a href="cadastro.html">Crie sua conta aqui.</a></span>
+      </div>
+
+      <p class="msg" id="msg"></p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
